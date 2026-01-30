@@ -10,8 +10,7 @@ import {
 } from "@/components/ui/pagination"
 import { cn } from '@/lib/utils';
 
-const TaskListPagination = ({ page, handlePrev, handleNext, numberPage, handlePageChange }) => {
-
+const UiTaskListPagination = ({ page, handlePrev, handleNext, numberPage, handlePageChange }) => {
     const generatePages = () => {
         const pages = []; // mang so trang se hien ra ne
 
@@ -43,8 +42,8 @@ const TaskListPagination = ({ page, handlePrev, handleNext, numberPage, handlePa
                         />
                     </PaginationItem>
                     {/* isActive={p === page}: highlight trang hiện tại
-                    onClick={() => {...}}: xử lý khi click 
-                    {p} Hiển thị số trang (1, 2, 3...)*/}
+                        onClick={() => {...}}: xử lý khi click 
+                        {p} Hiển thị số trang (1, 2, 3...)*/}
 
                     {pageToShow.map((p, index) => (
                         <PaginationItem key={index}>
@@ -66,12 +65,12 @@ const TaskListPagination = ({ page, handlePrev, handleNext, numberPage, handlePa
 
 
                     {/* nay la dung de danh so
-                    <PaginationItem>
-                        <PaginationLink href="#">1</PaginationLink>
-                    </PaginationItem>
-                     <PaginationItem>
-                        <PaginationEllipsis />
-                    </PaginationItem> */}
+                        <PaginationItem>
+                            <PaginationLink href="#">1</PaginationLink>
+                        </PaginationItem>
+                         <PaginationItem>
+                            <PaginationEllipsis />
+                        </PaginationItem> */}
 
 
 
@@ -85,7 +84,6 @@ const TaskListPagination = ({ page, handlePrev, handleNext, numberPage, handlePa
         </div>
 
     )
-
 }
 
-export default TaskListPagination;
+export default UiTaskListPagination;

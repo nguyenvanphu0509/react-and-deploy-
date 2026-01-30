@@ -4,11 +4,11 @@ import Footer from '@/components/Footer';
 import UiHeader from '@/components/UiHeader'
 import StartsAndFilters from '@/components/StartsAndFilters';
 import TaskList from '@/components/TaskList';
-import TaskListPagination from '@/components/TaskListpagination';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'sonner';
 import axios from 'axios';
 import { visibleTaskLimit } from '@/lib/data';
+import UiTaskListPagination from '@/components/UiTaskListPagination';
 
 /*space-y-6 là Tailwind CSS class để tạo khoảng cách dọc giữa các phần tử con.
 gio dung axios thay cho fetch  */
@@ -138,7 +138,7 @@ const HomePage = () => {
                     <TaskList filteredTask={visibleTask} filter={filter} handleTaskChanged={handleTaskChanged} />
                     {/* phan trang va loc theo date */}
                     <div className='flex flex-col items-center justify-between gap-6 sm:flex-row'>
-                        <TaskListPagination page={page} numberPage={numberPage} handleNext={handleNext} handlePrev={handlePrev} handlePageChange={handlePageChange} />
+                        <UiTaskListPagination page={page} numberPage={numberPage} handleNext={handleNext} handlePrev={handlePrev} handlePageChange={handlePageChange} />
                         <DataTimeFilter dataQuery={dataQuery} setdataQuery={setdataQuery} />
                     </div>
                     {/* chan trang */}
