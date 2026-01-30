@@ -1,7 +1,7 @@
 import AddTask from '@/components/AddTask';
 import DataTimeFilter from '@/components/DataTimeFilter';
 import Footer from '@/components/Footer';
-import Header from '@/components/header';
+import UiHeader from '@/components/UiHeader'
 import StartsAndFilters from '@/components/StartsAndFilters';
 import TaskList from '@/components/TaskList';
 import TaskListPagination from '@/components/TaskListpagination';
@@ -128,7 +128,7 @@ const HomePage = () => {
             <div className='container relative z-10 pt-8 mx-auto'>
                 <div className='w-full max-w-2xl p-6 mx-auto space-y-6'>
                     {/* dau trang */}
-                    <Header />
+                    <UiHeader />
                     {/* tao nhiem vu */}
                     <AddTask handleNewTaskAdd={handleTaskChanged} />
                     {/* thong ke va boc loc */}
